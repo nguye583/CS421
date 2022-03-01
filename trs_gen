@@ -1,0 +1,19 @@
+transition table generator in c++
+vector<states> = set of all states, preload from file
+vector<inputs> = set of all inputs, preload from file
+unordered_map<state we are in, input> = set of reachable states <- this is the transition table..
+
+
+while(there is more states to evaluate){
+  for(set of all inputs :into: state){
+    //consider the set of all states we can reach as one clustered state
+    new_state = unordered_map[state][input];
+    if(vector<states> does not contain new_state){
+      vector<states>.push_back(new_state);
+    }
+  }
+}
+
+for(all original states from vector){
+  if(set of reachable states created by transition table does not contain old state from vector) -> remove old state.. it is unreachable
+}
