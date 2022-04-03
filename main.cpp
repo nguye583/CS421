@@ -3,17 +3,14 @@
 #include<string>
 using namespace std;
 
-/* Look for all **'s and complete them */
-
 //=====================================================
-// File scanner.cpp written by: Group Number: ** 10
+// File scanner.cpp written by: Group Number: 10
 //=====================================================
 
 // --------- Two DFAs ---------------------------------
 
 // WORD DFA 
 // Done by: Sophia
-// RE:   **
 bool word(string s)
 {
     int state = 0;
@@ -256,7 +253,7 @@ ifstream fin;  // global stream for reading from the input file
 
 // Scanner processes only one word each time it is called
 // Gives back the token type and the word itself
-// ** Done by: Jake
+// ** Done by: Jake 
 int scanner(tokentype & tt, string & w)
 {
     fin >> w;                               // ** Grab the next word from the file via fin
@@ -306,7 +303,7 @@ int scanner(tokentype & tt, string & w)
         tt = ERROR;
         cout << "LEXICAL ERROR" << endl;
     }
-
+    
     return 0;
 
 }//the end of scanner
@@ -334,7 +331,7 @@ int main()
         if (theword == "eofm") break;  // stop now
 
         cout << "Type is:" << tokenName[thetype] << endl;
-        cout << "Word is:" << theword << endl;
+        cout << "Word is:" << theword << endl << endl;
     }
 
     cout << "End of file is encountered." << endl;
